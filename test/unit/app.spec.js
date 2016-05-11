@@ -37,7 +37,7 @@ describe('app', function () {
             expect(app.calculateArea(1, 1)).toBe(false);
         });
         it('should return false, if the first parametr is not a number', function () {
-            expect(app.calculateArea('x', 'x', 5, 'Dobrze', 'Zle')).toBe(false);
+            expect(app.calculateArea(5, 'x', 5, 'Dobrze', 'Zle')).toBe(false);
         });
         it('should return Dobrze message, if all parametrss are proper', function () {
             expect(app.calculateArea(30, 10, 1, 'Dobrze', 'Zle')).toEqual({ area : 20, message : 'Dobrze' });
@@ -46,7 +46,7 @@ describe('app', function () {
             expect(app.calculateArea(10, 10, 2, 'Dobrze', 'Zle')).toEqual({ area : -10, message : 'Zle' });
         });
         it('should return Big null message, if all parametrss are proper', function () {
-            expect(answer.calculateArea(0, 0, 0, 'Dobrze', 'Zle')).toEqual({area: 0, message: 'Big null'});
+            expect(app.calculateArea(0, 0, 0, 'Dobrze', 'Zle')).toEqual({area: 0, message: 'Big null'});
         });
     });
 });
